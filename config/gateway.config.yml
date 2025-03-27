@@ -1,0 +1,51 @@
+http:
+  port: 8080
+
+apiEndpoints:
+  departments:
+    path: /departments
+    methods: GET
+
+  department:
+    path: /departments/:id
+    methods: GET
+
+  apps:
+    path: /apps
+    methods: GET
+
+  app:
+    path: /apps/:id
+    methods: GET
+
+serviceEndpoints:
+  departmentService:
+    url: http://82.29.197.244:3001/api/v1
+  appService:
+    url: http://82.29.197.244:3002/api/v1
+
+policies:
+  - proxy
+
+pipelines:
+  default:
+    apiEndpoints:
+      - departments
+      - department
+
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: departmentService
+              changeOrigin: true
+
+  appsPipeline:
+    apiEndpoints:
+      - apps
+      - app
+
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: appService
+              changeOrigin: true
