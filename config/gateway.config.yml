@@ -18,11 +18,21 @@ apiEndpoints:
     path: /apps/:id
     methods: GET
 
+  employees:
+    path: /employees
+    methods: GET
+
+  employee:
+    path: /employee/:id
+    methods: GET
+
 serviceEndpoints:
   departmentService:
     url: http://82.29.197.244:3001/api/v1
   appService:
     url: http://82.29.197.244:3002/api/v1
+  employeeService:
+    url: http://82.29.197.244:3003/api/v1
 
 policies:
   - proxy
@@ -48,4 +58,15 @@ pipelines:
       - proxy:
           - action:
               serviceEndpoint: appService
+              changeOrigin: true
+
+  employeesPipeline:
+    apiEndpoints:
+      - employees
+      - employee
+
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: employeeService
               changeOrigin: true
