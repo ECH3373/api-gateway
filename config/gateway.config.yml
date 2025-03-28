@@ -23,7 +23,7 @@ apiEndpoints:
     methods: GET
 
   employee:
-    path: /employee/:id
+    path: /employees/:id
     methods: GET
 
 serviceEndpoints:
