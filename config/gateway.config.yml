@@ -28,11 +28,11 @@ apiEndpoints:
 
 serviceEndpoints:
   departmentService:
-    url: http://82.29.197.244:3001/api/v1
+    url: http://82.29.197.244:3000/api/v1
   appService:
-    url: http://82.29.197.244:3002/api/v1
+    url: http://82.29.197.244:3000/api/v1
   employeeService:
-    url: http://82.29.197.244:3003/api/v1
+    url: http://82.29.197.244:3000/api/v1
 
 policies:
   - proxy
