@@ -1,9 +1,11 @@
 import axios from 'axios';
+import cors from 'cors';
 import express from 'express';
 import { config } from '../config/index.js';
 
 export const app = express();
 app.use(express.json());
+app.use(cors());
 
 async function auth(headers) {
   try {
