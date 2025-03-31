@@ -79,4 +79,15 @@ export const gateway = {
       { path: '/resources/:id', as: '/resources/:id', method: 'patch' },
     ],
   },
+
+  enrollments: {
+    url: 'http://courses:3000/api/v1',
+
+    endpoints: [
+      { path: '/enrollments', as: '/enrollments', method: 'get' },
+      { path: '/enrollments/:id', as: '/enrollments/:id', method: 'get' },
+      { path: '/enrollments', as: '/enrollments', method: 'post' },
+      { path: '/enrollments/:id', as: '/enrollments/:id', method: 'patch' },
+    ],
+  },
 };
