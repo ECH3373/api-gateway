@@ -33,7 +33,8 @@ Object.keys(config.gateway).forEach((api) => {
         const response = await axios({
           method: endpoint.method,
           url: `${config.gateway[api].url}${path}`,
-          data: req.body,
+          data: ['post', 'put', 'patch'].includes(endpoint.method) ? req.body : undefined,
+          params: req.query,
           headers: forwardHeaders,
           timeout: 10000,
         });
