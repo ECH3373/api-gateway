@@ -35,4 +35,40 @@ export const gateway = {
       { path: '/employees/:id', as: '/employees/:id', method: 'get' },
     ],
   },
+
+  courses: {
+    url: 'http://courses:3000/api/v1',
+
+    endpoints: [
+      { path: '/courses', as: '/courses', method: 'get' },
+      { path: '/courses/:id', as: '/courses/:id', method: 'get' },
+    ],
+  },
+
+  modules: {
+    url: 'http://courses:3000/api/v1',
+
+    endpoints: [
+      { path: '/modules', as: '/modules', method: 'get' },
+      { path: '/modules/:id', as: '/modules/:id', method: 'get' },
+    ],
+  },
+
+  lessons: {
+    url: 'http://courses:3000/api/v1',
+
+    endpoints: [
+      { path: '/lessons', as: '/lessons', method: 'get' },
+      { path: '/lessons/:id', as: '/lessons/:id', method: 'get' },
+    ],
+  },
+
+  resources: {
+    url: 'http://courses:3000/api/v1',
+
+    endpoints: [
+      { path: '/resources', as: '/resources', method: 'get' },
+      { path: '/resources/:id', as: '/resources/:id', method: 'get' },
+    ],
+  },
 };
