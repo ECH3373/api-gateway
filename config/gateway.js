@@ -42,6 +42,8 @@ export const gateway = {
     endpoints: [
       { path: '/courses', as: '/courses', method: 'get' },
       { path: '/courses/:id', as: '/courses/:id', method: 'get' },
+      { path: '/courses', as: '/courses', method: 'post' },
+      { path: '/courses/:id', as: '/courses/:id', method: 'patch' },
     ],
   },
 
@@ -51,6 +53,8 @@ export const gateway = {
     endpoints: [
       { path: '/modules', as: '/modules', method: 'get' },
       { path: '/modules/:id', as: '/modules/:id', method: 'get' },
+      { path: '/modules', as: '/modules', method: 'post' },
+      { path: '/modules/:id', as: '/modules/:id', method: 'patch' },
     ],
   },
 
@@ -60,6 +64,8 @@ export const gateway = {
     endpoints: [
       { path: '/lessons', as: '/lessons', method: 'get' },
       { path: '/lessons/:id', as: '/lessons/:id', method: 'get' },
+      { path: '/lessons', as: '/lessons', method: 'post' },
+      { path: '/lessons/:id', as: '/lessons/:id', method: 'patch' },
     ],
   },
 
@@ -69,6 +75,8 @@ export const gateway = {
     endpoints: [
       { path: '/resources', as: '/resources', method: 'get' },
       { path: '/resources/:id', as: '/resources/:id', method: 'get' },
+      { path: '/resources', as: '/resources', method: 'post' },
+      { path: '/resources/:id', as: '/resources/:id', method: 'patch' },
     ],
   },
 };
