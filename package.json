@@ -1,11 +1,25 @@
 {
   "name": "gateway",
-  "description": "Express Gateway Instance Bootstraped from Command Line",
-  "repository": {},
-  "license": "UNLICENSED",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "Gateway management application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ECH3373"
+  },
+  "author": "Eduardo Cortés",
+  "license": "ISC",
   "dependencies": {
-    "express-gateway": "^1.16.11"
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
