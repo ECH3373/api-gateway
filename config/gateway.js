@@ -31,14 +31,8 @@ export const gateway = {
     url: 'http://employees:3000/api/v1',
 
     endpoints: [
-      { path: '/apps', as: '/apps', method: 'get' },
-      { path: '/apps/:id', as: '/apps/:id', method: 'get' },
+      { path: '/employees', as: '/employees', method: 'get' },
+      { path: '/employees/:id', as: '/employees/:id', method: 'get' },
     ],
-  },
-
-  pokemon: {
-    url: 'https://pokeapi.co/api/v2/pokemon',
-
-    endpoints: [{ path: '/:id', as: '/:id', method: 'get' }],
   },
 };
