@@ -9,12 +9,6 @@ export const gateway = {
     ],
   },
 
-  hub: {
-    url: 'http://hub:3000/api/v1',
-
-    endpoints: [{ path: '/hub', as: '/hub', method: 'post' }],
-  },
-
   departments: {
     url: 'http://departments:3000/api/v1',
 
