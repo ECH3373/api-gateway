@@ -9,6 +9,12 @@ export const gateway = {
     ],
   },
 
+  gpt: {
+    url: 'http://gpt:3000/api/v1',
+
+    endpoints: [{ path: '/message', as: '/gpt/message', method: 'post' }],
+  },
+
   departments: {
     url: 'http://departments:3000/api/v1',
 
@@ -99,6 +105,50 @@ export const gateway = {
       { path: '/progress/:id', as: '/major/progress/:id', method: 'get' },
       { path: '/progress', as: '/major/progress', method: 'post', protected: true },
       { path: '/progress/:id', as: '/major/progress/:id', method: 'patch', protected: true },
+    ],
+  },
+
+  store: {
+    url: 'http://store:3000/api/v1',
+
+    endpoints: [
+      { path: '/products', as: '/store/products', method: 'get' },
+      { path: '/products/:id', as: '/store/products/:id', method: 'get' },
+      { path: '/products', as: '/store/products', method: 'post', protected: true },
+      { path: '/products/:id', as: '/store/products/:id', method: 'patch', protected: true },
+    ],
+  },
+
+  carts: {
+    url: 'http://store:3000/api/v1',
+
+    endpoints: [
+      { path: '/carts', as: '/store/carts', method: 'get' },
+      { path: '/carts/:id', as: '/store/carts/:id', method: 'get' },
+      { path: '/carts', as: '/store/carts', method: 'post', protected: true },
+      { path: '/carts/:id', as: '/store/carts/:id', method: 'patch', protected: true },
+    ],
+  },
+
+  orders: {
+    url: 'http://store:3000/api/v1',
+
+    endpoints: [
+      { path: '/orders', as: '/store/orders', method: 'get' },
+      { path: '/orders/:id', as: '/store/orders/:id', method: 'get' },
+      { path: '/orders', as: '/store/orders', method: 'post', protected: true },
+      { path: '/orders/:id', as: '/store/orders/:id', method: 'patch', protected: true },
+    ],
+  },
+
+  order_products: {
+    url: 'http://store:3000/api/v1',
+
+    endpoints: [
+      { path: '/order_products', as: '/store/order_products', method: 'get' },
+      { path: '/order_products/:id', as: '/store/order_products/:id', method: 'get' },
+      { path: '/order_products', as: '/store/order_products', method: 'post', protected: true },
+      { path: '/order_products/:id', as: '/store/order_products/:id', method: 'patch', protected: true },
     ],
   },
 };
