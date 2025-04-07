@@ -151,4 +151,26 @@ export const gateway = {
       { path: '/order_products/:id', as: '/store/order_products/:id', method: 'patch', protected: true },
     ],
   },
+
+  event: {
+    url: 'http://major:3000/api/v1',
+
+    endpoints: [
+      { path: '/event', as: '/major/event', method: 'get' },
+      { path: '/event/:id', as: '/major/event/:id', method: 'get' },
+      { path: '/event', as: '/major/event', method: 'post', protected: true },
+      { path: '/event/:id', as: '/major/event/:id', method: 'patch', protected: true },
+    ],
+  },
+
+  enrollment: {
+    url: 'http://major:3000/api/v1',
+
+    endpoints: [
+      { path: '/enrollments', as: '/major/enrollments', method: 'get' },
+      { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'get' },
+      { path: '/enrollments', as: '/major/enrollments', method: 'post', protected: true },
+      { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'patch', protected: true },
+    ],
+  },
 };
