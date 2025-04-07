@@ -46,10 +46,10 @@ export const gateway = {
     url: 'http://courses:3000/api/v1',
 
     endpoints: [
-      { path: '/courses', as: '/major/courses', method: 'get' },
-      { path: '/courses/:id', as: '/major/courses/:id', method: 'get' },
-      { path: '/courses', as: '/major/courses', method: 'post', protected: true },
-      { path: '/courses/:id', as: '/major/courses/:id', method: 'patch', protected: true },
+      { path: '/courses', as: '/courses/courses', method: 'get' },
+      { path: '/courses/:id', as: '/courses/courses/:id', method: 'get' },
+      { path: '/courses', as: '/courses/courses', method: 'post', protected: true },
+      { path: '/courses/:id', as: '/courses/courses/:id', method: 'patch', protected: true },
     ],
   },
 
@@ -57,10 +57,10 @@ export const gateway = {
     url: 'http://courses:3000/api/v1',
 
     endpoints: [
-      { path: '/modules', as: '/major/modules', method: 'get' },
-      { path: '/modules/:id', as: '/major/modules/:id', method: 'get' },
-      { path: '/modules', as: '/major/modules', method: 'post', protected: true },
-      { path: '/modules/:id', as: '/major/modules/:id', method: 'patch', protected: true },
+      { path: '/modules', as: '/courses/modules', method: 'get' },
+      { path: '/modules/:id', as: '/courses/modules/:id', method: 'get' },
+      { path: '/modules', as: '/courses/modules', method: 'post', protected: true },
+      { path: '/modules/:id', as: '/courses/modules/:id', method: 'patch', protected: true },
     ],
   },
 
@@ -68,10 +68,10 @@ export const gateway = {
     url: 'http://courses:3000/api/v1',
 
     endpoints: [
-      { path: '/lessons', as: '/major/lessons', method: 'get' },
-      { path: '/lessons/:id', as: '/major/lessons/:id', method: 'get' },
-      { path: '/lessons', as: '/major/lessons', method: 'post', protected: true },
-      { path: '/lessons/:id', as: '/major/lessons/:id', method: 'patch', protected: true },
+      { path: '/lessons', as: '/courses/lessons', method: 'get' },
+      { path: '/lessons/:id', as: '/courses/lessons/:id', method: 'get' },
+      { path: '/lessons', as: '/courses/lessons', method: 'post', protected: true },
+      { path: '/lessons/:id', as: '/courses/lessons/:id', method: 'patch', protected: true },
     ],
   },
 
@@ -79,10 +79,10 @@ export const gateway = {
     url: 'http://courses:3000/api/v1',
 
     endpoints: [
-      { path: '/resources', as: '/major/resources', method: 'get' },
-      { path: '/resources/:id', as: '/major/resources/:id', method: 'get' },
-      { path: '/resources', as: '/major/resources', method: 'post', protected: true },
-      { path: '/resources/:id', as: '/major/resources/:id', method: 'patch', protected: true },
+      { path: '/resources', as: '/courses/resources', method: 'get' },
+      { path: '/resources/:id', as: '/courses/resources/:id', method: 'get' },
+      { path: '/resources', as: '/courses/resources', method: 'post', protected: true },
+      { path: '/resources/:id', as: '/courses/resources/:id', method: 'patch', protected: true },
     ],
   },
 
@@ -90,10 +90,10 @@ export const gateway = {
     url: 'http://courses:3000/api/v1',
 
     endpoints: [
-      { path: '/enrollments', as: '/major/enrollments', method: 'get' },
-      { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'get' },
-      { path: '/enrollments', as: '/major/enrollments', method: 'post', protected: true },
-      { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'patch', protected: true },
+      { path: '/enrollments', as: '/courses/enrollments', method: 'get' },
+      { path: '/enrollments/:id', as: '/courses/enrollments/:id', method: 'get' },
+      { path: '/enrollments', as: '/courses/enrollments', method: 'post', protected: true },
+      { path: '/enrollments/:id', as: '/courses/enrollments/:id', method: 'patch', protected: true },
     ],
   },
 
@@ -101,10 +101,10 @@ export const gateway = {
     url: 'http://courses:3000/api/v1',
 
     endpoints: [
-      { path: '/progress', as: '/major/progress', method: 'get' },
-      { path: '/progress/:id', as: '/major/progress/:id', method: 'get' },
-      { path: '/progress', as: '/major/progress', method: 'post', protected: true },
-      { path: '/progress/:id', as: '/major/progress/:id', method: 'patch', protected: true },
+      { path: '/progress', as: '/courses/progress', method: 'get' },
+      { path: '/progress/:id', as: '/courses/progress/:id', method: 'get' },
+      { path: '/progress', as: '/courses/progress', method: 'post', protected: true },
+      { path: '/progress/:id', as: '/courses/progress/:id', method: 'patch', protected: true },
     ],
   },
 
