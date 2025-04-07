@@ -156,10 +156,10 @@ export const gateway = {
     url: 'http://major-api:3000/api/v1',
 
     endpoints: [
-      { path: '/event', as: '/major/event', method: 'get' },
-      { path: '/event/:id', as: '/major/event/:id', method: 'get' },
-      { path: '/event', as: '/major/event', method: 'post', protected: true },
-      { path: '/event/:id', as: '/major/event/:id', method: 'patch', protected: true },
+      { path: '/events', as: '/major/events', method: 'get' },
+      { path: '/events/:id', as: '/major/events/:id', method: 'get' },
+      { path: '/events', as: '/major/events', method: 'post', protected: true },
+      { path: '/events/:id', as: '/major/events/:id', method: 'patch', protected: true },
     ],
   },
 
