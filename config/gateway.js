@@ -1,6 +1,6 @@
 export const gateway = {
   auth: {
-    url: 'http://auth:3000/api/v1/auth',
+    url: 'http://auth-api:3000/api/v1/auth',
 
     endpoints: [
       { path: '/login', as: '/auth/login', method: 'post' },
@@ -10,13 +10,13 @@ export const gateway = {
   },
 
   gpt: {
-    url: 'http://gpt:3000/api/v1',
+    url: 'http://gpt-api:3000/api/v1',
 
     endpoints: [{ path: '/chat', as: '/gpt/chat', method: 'post' }],
   },
 
   departments: {
-    url: 'http://departments:3000/api/v1',
+    url: 'http://departments-api:3000/api/v1',
 
     endpoints: [
       { path: '/departments', as: '/departments', method: 'get' },
@@ -25,7 +25,7 @@ export const gateway = {
   },
 
   apps: {
-    url: 'http://apps:3000/api/v1',
+    url: 'http://apps-api:3000/api/v1',
 
     endpoints: [
       { path: '/apps', as: '/apps', method: 'get' },
@@ -34,7 +34,7 @@ export const gateway = {
   },
 
   employees: {
-    url: 'http://employees:3000/api/v1',
+    url: 'http://employees-api:3000/api/v1',
 
     endpoints: [
       { path: '/employees', as: '/employees', method: 'get' },
@@ -43,7 +43,7 @@ export const gateway = {
   },
 
   courses: {
-    url: 'http://courses:3000/api/v1',
+    url: 'http://courses-api:3000/api/v1',
 
     endpoints: [
       { path: '/courses', as: '/courses/courses', method: 'get' },
@@ -54,7 +54,7 @@ export const gateway = {
   },
 
   modules: {
-    url: 'http://courses:3000/api/v1',
+    url: 'http://courses-api:3000/api/v1',
 
     endpoints: [
       { path: '/modules', as: '/courses/modules', method: 'get' },
@@ -65,7 +65,7 @@ export const gateway = {
   },
 
   lessons: {
-    url: 'http://courses:3000/api/v1',
+    url: 'http://courses-api:3000/api/v1',
 
     endpoints: [
       { path: '/lessons', as: '/courses/lessons', method: 'get' },
@@ -76,7 +76,7 @@ export const gateway = {
   },
 
   resources: {
-    url: 'http://courses:3000/api/v1',
+    url: 'http://courses-api:3000/api/v1',
 
     endpoints: [
       { path: '/resources', as: '/courses/resources', method: 'get' },
@@ -87,7 +87,7 @@ export const gateway = {
   },
 
   enrollments: {
-    url: 'http://courses:3000/api/v1',
+    url: 'http://courses-api:3000/api/v1',
 
     endpoints: [
       { path: '/enrollments', as: '/courses/enrollments', method: 'get' },
@@ -98,7 +98,7 @@ export const gateway = {
   },
 
   progress: {
-    url: 'http://courses:3000/api/v1',
+    url: 'http://courses-api:3000/api/v1',
 
     endpoints: [
       { path: '/progress', as: '/courses/progress', method: 'get' },
@@ -109,7 +109,7 @@ export const gateway = {
   },
 
   store: {
-    url: 'http://store:3000/api/v1',
+    url: 'http://store-api:3000/api/v1',
 
     endpoints: [
       { path: '/products', as: '/store/products', method: 'get' },
@@ -120,7 +120,7 @@ export const gateway = {
   },
 
   carts: {
-    url: 'http://store:3000/api/v1',
+    url: 'http://store-api:3000/api/v1',
 
     endpoints: [
       { path: '/carts', as: '/store/carts', method: 'get' },
@@ -131,7 +131,7 @@ export const gateway = {
   },
 
   orders: {
-    url: 'http://store:3000/api/v1',
+    url: 'http://store-api:3000/api/v1',
 
     endpoints: [
       { path: '/orders', as: '/store/orders', method: 'get' },
@@ -142,7 +142,7 @@ export const gateway = {
   },
 
   order_products: {
-    url: 'http://store:3000/api/v1',
+    url: 'http://store-api:3000/api/v1',
 
     endpoints: [
       { path: '/order_products', as: '/store/order_products', method: 'get' },
@@ -153,7 +153,7 @@ export const gateway = {
   },
 
   event: {
-    url: 'http://major:3000/api/v1',
+    url: 'http://major-api:3000/api/v1',
 
     endpoints: [
       { path: '/event', as: '/major/event', method: 'get' },
@@ -164,7 +164,7 @@ export const gateway = {
   },
 
   enrollment: {
-    url: 'http://major:3000/api/v1',
+    url: 'http://major-api:3000/api/v1',
 
     endpoints: [
       { path: '/enrollments', as: '/major/enrollments', method: 'get' },
