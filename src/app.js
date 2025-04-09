@@ -38,16 +38,10 @@ Object.keys(config.gateway).forEach((api) => {
           data: ['post', 'put', 'patch'].includes(endpoint.method) ? req.body : undefined,
           params: req.query,
           headers: forwardHeaders,
-          responseType: 'arraybuffer',
           timeout: 10000,
         });
 
-        const contentType = response.headers['content-type'];
-        res.setHeader('Content-Type', contentType);
-        res.setHeader('Content-Disposition', response.headers['content-disposition'] || 'attachment');
-
-        //return res.status(response.status).json(response.data);
-        return res.status(response.status).send(response.data);
+        return res.status(response.status).json(response.data);
       } catch (error) {
         return res.status(error?.response?.status || 500).json({ status: 'error', error: error?.response?.data?.error || 'internal gateway error' });
       }
