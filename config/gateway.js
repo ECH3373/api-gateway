@@ -173,4 +173,10 @@ export const gateway = {
       { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'patch', protected: true },
     ],
   },
+
+  invoice: {
+    url: 'http://major-api:3000/api/v1',
+
+    endpoints: [{ path: '/invoices/:id', as: '/major/invoices/:id', method: 'get' }],
+  },
 };
