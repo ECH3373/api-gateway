@@ -42,6 +42,9 @@ Object.keys(config.gateway).forEach((api) => {
           timeout: 10000,
         });
 
+        res.setHeader('Content-Type', contentType);
+        res.setHeader('Content-Disposition', response.headers['content-disposition'] || 'attachment');
+
         //return res.status(response.status).json(response.data);
         return res.status(response.status).send(response.data);
       } catch (error) {
