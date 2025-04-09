@@ -152,6 +152,12 @@ export const gateway = {
     ],
   },
 
+  invoice: {
+    url: 'http://store-api:3000/api/v1',
+
+    endpoints: [{ path: '/invoices/:id', as: '/major/invoices/:id', method: 'get' }],
+  },
+
   event: {
     url: 'http://major-api:3000/api/v1',
 
@@ -172,11 +178,5 @@ export const gateway = {
       { path: '/enrollments', as: '/major/enrollments', method: 'post', protected: true },
       { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'patch', protected: true },
     ],
-  },
-
-  invoice: {
-    url: 'http://major-api:3000/api/v1',
-
-    endpoints: [{ path: '/invoices/:id', as: '/major/invoices/:id', method: 'get' }],
   },
 };
