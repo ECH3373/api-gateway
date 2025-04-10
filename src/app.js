@@ -18,38 +18,40 @@ async function auth(headers) {
 
 Object.keys(config.gateway).forEach((api) => {
   config.gateway[api].endpoints.forEach((endpoint) => {
-    app[endpoint.method](endpoint.as, async (req, res) => {
+    const { as, method, protected: isProtected, path, isBinary } = endpoint;
+
+    app[method](as, async (req, res) => {
       try {
         const { host, connection, 'content-length': contentLength, ...forwardHeaders } = req.headers;
 
-        if (endpoint.protected) {
+        if (isProtected) {
           const isAuthenticated = await auth(forwardHeaders);
           if (!isAuthenticated) return res.status(401).json({ status: 'error', error: 'Unauthorized' });
         }
 
-        let path = endpoint.path;
+        let resolvedPath = path;
         Object.entries(req.params).forEach(([key, value]) => {
-          path = path.replace(`:${key}`, value);
+          resolvedPath = resolvedPath.replace(`:${key}`, value);
         });
 
         const response = await axios({
-          method: endpoint.method,
-          url: `${config.gateway[api].url}${path}`,
-          data: ['post', 'put', 'patch'].includes(endpoint.method) ? req.body : undefined,
+          method,
+          url: `${config.gateway[api].url}${resolvedPath}`,
+          data: ['post', 'put', 'patch'].includes(method) ? req.body : undefined,
           params: req.query,
           headers: forwardHeaders,
           timeout: 10000,
-          responseType: endpoint.isBinary ? 'stream' : 'json',
+          responseType: isBinary ? 'stream' : 'json',
         });
 
-        if (endpoint.isBinary) {
+        if (isBinary) {
           res.set(response.headers);
           response.data.pipe(res);
         } else {
-          return res.status(response.status).json(response.data);
+          res.status(response.status).json(response.data);
         }
       } catch (error) {
-        return res.status(error?.response?.status || 500).json({
+        res.status(error?.response?.status || 500).json({
           status: 'error',
           error: error?.response?.data?.error || 'internal gateway error',
         });
