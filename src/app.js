@@ -39,11 +39,20 @@ Object.keys(config.gateway).forEach((api) => {
           params: req.query,
           headers: forwardHeaders,
           timeout: 10000,
+          responseType: endpoint.isBinary ? 'stream' : 'json',
         });
 
-        return res.status(response.status).json(response.data);
+        if (endpoint.isBinary) {
+          res.set(response.headers);
+          response.data.pipe(res);
+        } else {
+          return res.status(response.status).json(response.data);
+        }
       } catch (error) {
-        return res.status(error?.response?.status || 500).json({ status: 'error', error: error?.response?.data?.error || 'internal gateway error' });
+        return res.status(error?.response?.status || 500).json({
+          status: 'error',
+          error: error?.response?.data?.error || 'internal gateway error',
+        });
       }
     });
   });

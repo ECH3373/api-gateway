@@ -155,7 +155,7 @@ export const gateway = {
   invoice: {
     url: 'http://store-api:3000/api/v1',
 
-    endpoints: [{ path: '/invoices/:id', as: '/store/invoices/:id', method: 'get' }],
+    endpoints: [{ path: '/invoices/:id', as: '/store/invoices/:id', method: 'get', isBinary: true }],
   },
 
   event: {
