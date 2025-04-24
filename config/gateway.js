@@ -50,6 +50,7 @@ export const gateway = {
       { path: '/courses/:id', as: '/courses/courses/:id', method: 'get' },
       { path: '/courses', as: '/courses/courses', method: 'post', protected: true },
       { path: '/courses/:id', as: '/courses/courses/:id', method: 'patch', protected: true },
+      { path: '/courses/:id', as: '/courses/courses/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -61,6 +62,7 @@ export const gateway = {
       { path: '/modules/:id', as: '/courses/modules/:id', method: 'get' },
       { path: '/modules', as: '/courses/modules', method: 'post', protected: true },
       { path: '/modules/:id', as: '/courses/modules/:id', method: 'patch', protected: true },
+      { path: '/modules/:id', as: '/courses/modules/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -72,6 +74,7 @@ export const gateway = {
       { path: '/lessons/:id', as: '/courses/lessons/:id', method: 'get' },
       { path: '/lessons', as: '/courses/lessons', method: 'post', protected: true },
       { path: '/lessons/:id', as: '/courses/lessons/:id', method: 'patch', protected: true },
+      { path: '/lessons/:id', as: '/courses/lessons/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -83,6 +86,7 @@ export const gateway = {
       { path: '/resources/:id', as: '/courses/resources/:id', method: 'get' },
       { path: '/resources', as: '/courses/resources', method: 'post', protected: true },
       { path: '/resources/:id', as: '/courses/resources/:id', method: 'patch', protected: true },
+      { path: '/resources/:id', as: '/courses/resources/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -94,6 +98,7 @@ export const gateway = {
       { path: '/enrollments/:id', as: '/courses/enrollments/:id', method: 'get' },
       { path: '/enrollments', as: '/courses/enrollments', method: 'post', protected: true },
       { path: '/enrollments/:id', as: '/courses/enrollments/:id', method: 'patch', protected: true },
+      { path: '/enrollments/:id', as: '/courses/enrollments/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -105,6 +110,7 @@ export const gateway = {
       { path: '/progress/:id', as: '/courses/progress/:id', method: 'get' },
       { path: '/progress', as: '/courses/progress', method: 'post', protected: true },
       { path: '/progress/:id', as: '/courses/progress/:id', method: 'patch', protected: true },
+      { path: '/progress/:id', as: '/courses/progress/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -116,6 +122,7 @@ export const gateway = {
       { path: '/products/:id', as: '/store/products/:id', method: 'get' },
       { path: '/products', as: '/store/products', method: 'post', protected: true },
       { path: '/products/:id', as: '/store/products/:id', method: 'patch', protected: true },
+      { path: '/products/:id', as: '/store/products/:id', method: 'delete', protected: true },
     ],
   },
 
