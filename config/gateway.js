@@ -173,6 +173,7 @@ export const gateway = {
       { path: '/events/:id', as: '/major/events/:id', method: 'get' },
       { path: '/events', as: '/major/events', method: 'post', protected: true },
       { path: '/events/:id', as: '/major/events/:id', method: 'patch', protected: true },
+      { path: '/events/:id', as: '/major/events/:id', method: 'delete', protected: true },
     ],
   },
 
@@ -184,6 +185,7 @@ export const gateway = {
       { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'get' },
       { path: '/enrollments', as: '/major/enrollments', method: 'post', protected: true },
       { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'patch', protected: true },
+      { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'delete', protected: true },
     ],
   },
 };
