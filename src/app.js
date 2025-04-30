@@ -1,9 +1,11 @@
+import path from 'path';
 import axios from 'axios';
 import cors from 'cors';
 import express from 'express';
 import { config } from '../config/index.js';
 
 export const app = express();
+app.use(express.static(path.join(process.cwd(), 'public')));
 app.use(express.json());
 app.use(cors());
 
