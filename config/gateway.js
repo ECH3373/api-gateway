@@ -195,9 +195,9 @@ export const gateway = {
     endpoints: [
       { path: '/login', as: '/major/images', method: 'get' },
       { path: '/login/:id', as: '/major/images/:id', method: 'get' },
-      { path: '/login', as: '/major/images', method: 'post', protected: true },
-      { path: '/login/:id', as: '/major/images/:id', method: 'patch', protected: true },
-      { path: '/login/:id', as: '/major/images/:id', method: 'delete', protected: true },
+      { path: '/login', as: '/major/images', method: 'post' },
+      { path: '/login/:id', as: '/major/images/:id', method: 'patch' },
+      { path: '/login/:id', as: '/major/images/:id', method: 'delete' },
     ],
   },
 
