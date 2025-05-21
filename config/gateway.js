@@ -188,4 +188,13 @@ export const gateway = {
       { path: '/enrollments/:id', as: '/major/enrollments/:id', method: 'delete', protected: true },
     ],
   },
+
+  defects: {
+    url: 'http://defects-api:3000/api/v1',
+
+    endpoints: [
+      { path: '/defects', as: '/defects', method: 'get' },
+      { path: '/defects/:id', as: '/defects/:id', method: 'get' },
+    ],
+  },
 };
