@@ -189,6 +189,18 @@ export const gateway = {
     ],
   },
 
+  major_images: {
+    url: 'http://major-api:3000/api/v1',
+
+    endpoints: [
+      { path: '/login', as: '/major/images', method: 'get' },
+      { path: '/login/:id', as: '/major/images/:id', method: 'get' },
+      { path: '/login', as: '/major/images', method: 'post', protected: true },
+      { path: '/login/:id', as: '/major/images/:id', method: 'patch', protected: true },
+      { path: '/login/:id', as: '/major/images/:id', method: 'delete', protected: true },
+    ],
+  },
+
   defects: {
     url: 'http://defects-api:3000/api/v1',
 
