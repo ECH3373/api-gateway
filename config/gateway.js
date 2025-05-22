@@ -209,4 +209,28 @@ export const gateway = {
       { path: '/defects/:id', as: '/defects/:id', method: 'get' },
     ],
   },
+
+  major_pieces: {
+    url: 'http://major-api:3000/api/v1',
+
+    endpoints: [
+      { path: '/pieces', as: '/major/pieces', method: 'get' },
+      { path: '/pieces/:id', as: '/major/pieces/:id', method: 'get' },
+      { path: '/pieces', as: '/major/pieces', method: 'post' },
+      { path: '/pieces/:id', as: '/major/pieces/:id', method: 'patch' },
+      { path: '/pieces/:id', as: '/major/pieces/:id', method: 'delete' },
+    ],
+  },
+
+  major_dots: {
+    url: 'http://major-api:3000/api/v1',
+
+    endpoints: [
+      { path: '/dots', as: '/major/dots', method: 'get' },
+      { path: '/dots/:id', as: '/major/dots/:id', method: 'get' },
+      { path: '/dots', as: '/major/dots', method: 'post' },
+      { path: '/dots/:id', as: '/major/dots/:id', method: 'patch' },
+      { path: '/dots/:id', as: '/major/dots/:id', method: 'delete' },
+    ],
+  },
 };
