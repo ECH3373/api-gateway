@@ -13,6 +13,7 @@ export const gateway = {
     url: 'http://gpt-api:3000/api/v1',
 
     endpoints: [{ path: '/chat', as: '/gpt/chat', method: 'post' }],
+    endpoints: [{ path: '/tts', as: '/gpt/tts', method: 'post' }],
   },
 
   departments: {
